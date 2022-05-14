@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect }from 'react'
+import React, { useState, useRef }from 'react'
 import '../assets/CSS/navbar.css';
 import SearchModal from './SearchModal';
 // import data from '../data';
@@ -55,10 +55,10 @@ function Navbar() {
         setModal(true);
     }
 
-    useEffect(()=> {
-        searchForRecipe("chicken");
-        setModal(true)
-    }, []);
+    // useEffect(()=> {
+    //     searchForRecipe("chicken");
+    //     setModal(true)
+    // }, []);
 
     
   return (
