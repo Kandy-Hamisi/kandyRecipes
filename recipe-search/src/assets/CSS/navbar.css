@@ -1,0 +1,45 @@
+.navbar-section {
+    position: fixed;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    margin-left: 3.5rem;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav .menu-nav-item {
+    margin-right: 1.5em;
+    cursor: pointer;
+}
+
+.search-bar-container {
+    margin-right: 3.5rem;
+}
+
+.search-bar-container input {
+    outline: none;
+    border: none;
+    background-color: #fff;
+    padding: 0.8em;
+    border-radius: 5px;
+    position: relative;
+}
+
+.showbtn {
+    position: absolute;
+    right: 5em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.hidebtn {
+    display: none;
+}

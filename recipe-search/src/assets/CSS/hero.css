@@ -1,0 +1,99 @@
+.hero-section {
+    background: linear-gradient(to right, #fff 60%, rgb(228, 237, 238) 40%);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-content {
+    padding-top: 10%;
+    margin: 0 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5em;
+}
+
+.hero-content img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text-container p {
+    line-height: 2.5;
+}
+
+.btn-container {
+    margin-top: 1em;
+    display: flex;
+}
+
+.btn-container button {
+    margin-right: 1em;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-container .btn-outline {
+    background: none;
+    border: 1px solid goldenrod;
+    
+}
+
+.btn-container .btn-primary {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+.img-card-container {
+    position: relative;
+}
+
+/* hero card css */
+.card{
+    /* box-shadow: 1px 1px 2px rgba(0,0,0,0.5); */
+    box-shadow: -2px 20px 58px -22px rgba(0,0,0,0.75);
+
+    border-radius: 10px;
+    background: #fff;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    padding: 10px 25px;
+}
+
+.card-1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+
+
+figure .card-img {
+    height: 40px;
+    width: 40px;
+    border: 3px solid rgb(228, 237, 238);
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.recipe-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}

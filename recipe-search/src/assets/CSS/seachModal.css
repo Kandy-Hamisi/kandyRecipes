@@ -1,0 +1,29 @@
+.mymodal {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 15px;
+    border-radius: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    height: 70vh;
+    width: 70vw;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.recipe-image {
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
