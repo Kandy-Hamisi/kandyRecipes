@@ -1,9 +1,16 @@
-import React, { useState, useRef }from 'react'
+import React, { useState, useRef, useContext }from 'react'
+import { RecipeContext } from '../App';
 import '../assets/CSS/navbar.css';
 import SearchModal from './SearchModal';
 // import data from '../data';
 
+
+
 function Navbar() {
+
+   const navbarContext = useContext(RecipeContext);
+   const recipeModalState = navbarContext.recipeModalState;
+   const handleOpenModal = navbarContext.handleOpenModal;
 
    
 
@@ -12,7 +19,7 @@ function Navbar() {
     
     
     const [searchBtn, setSearchBtn] = useState(false);
-    const [modal, setModal] = useState(false);
+    // const [modal, setModal] = useState(false);
     const [loading, setLoading] = useState(false);
     const inputRef = useRef(null);
     const [recipes, setRecipes] = useState([]);
@@ -52,7 +59,7 @@ function Navbar() {
     const handleSubmit = (e) => {
         e.preventDefault();
         searchForRecipe(inputRef.current.value);
-        setModal(true);
+        handleOpenModal();
     }
 
     // useEffect(()=> {
@@ -101,7 +108,7 @@ function Navbar() {
         </header>
         
         {
-            modal && <div className='lightbox'>
+            recipeModalState.isModalOpen && <div className='lightbox'>
                 <SearchModal recipes={recipes} loading={loading} name={recipeName}/>
             </div>
         }

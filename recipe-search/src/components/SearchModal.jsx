@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { FaTimes } from 'react-icons/fa'
+import { RecipeContext } from '../App';
 import '../assets/CSS/seachModal.css';
 // import {v4 as uuidv4} from 'uuid'
 
 function SearchModal({recipes, loading, name}) {
 
+  const modalContext = useContext(RecipeContext);
+  const handleCloseModal =  modalContext.handleCloseModal;
+  console.log(handleCloseModal);
+
   console.log(recipes);
   return (
     <div className="mymodal">
+      <div className="close-btn"><FaTimes onClick={handleCloseModal} /></div>
         <h1>{name}</h1>
         <div className='recipe-container'>
           {
