@@ -13,6 +13,19 @@
     width: 70vw;
 }
 
+.recipe-item-modal {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 15px;
+    border-radius: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

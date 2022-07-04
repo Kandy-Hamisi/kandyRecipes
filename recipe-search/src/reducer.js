@@ -13,3 +13,19 @@ export const reducer = (state, action) => {
         }
     }
 }
+
+export const itemReducer = (state, action) => {
+    if (action.type === "CLOSE_MODAL") {
+        return {
+            ...state,
+            isItemModalOpen: false
+        }
+    }
+
+    if (action.type === "OPEN_MODAL") {
+        return {
+            ...state,
+            isItemModalOpen: true
+        }
+    }
+}

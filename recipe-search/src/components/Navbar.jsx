@@ -3,6 +3,7 @@ import { RecipeContext } from '../App';
 import '../assets/CSS/navbar.css';
 import SearchModal from './SearchModal';
 // import data from '../data';
+import uuid from 'react-uuid';
 
 
 
@@ -45,8 +46,16 @@ function Navbar() {
                 return response.json();
             })
             .then(res => {
-                // console.log("final response", res.hits);
-                setRecipes(res.hits);
+                // creating an empty array to store all the recipes with IDs
+                const newHits = [];
+
+                res.hits.map(recipeItem => {
+                    const newRecipe = {...recipeItem, id: uuid()};
+                    newHits.push(newRecipe);
+                    return newHits;
+                })
+
+                setRecipes(newHits);
                 setRecipeName(res.q);
                 setLoading(false);
             })
